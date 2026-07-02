@@ -1,9 +1,10 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ArrowRight, ChevronDown, Menu, MessageCircle, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { images, schoolInfo } from "@/lib/content";
 
@@ -27,6 +28,30 @@ const exploreLinks = [
 ];
 
 const allLinks = [...primaryLinks, ...exploreLinks];
+
+const menuEase = [0.22, 1, 0.36, 1] as const;
+
+const mobileMenuVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.28, ease: menuEase } },
+  exit: { opacity: 0, transition: { duration: 0.22, ease: menuEase } },
+};
+
+const mobilePanelVariants = {
+  hidden: { opacity: 0, y: 26, scale: 0.98 },
+  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5, ease: menuEase } },
+  exit: { opacity: 0, y: 18, scale: 0.985, transition: { duration: 0.24, ease: menuEase } },
+};
+
+const mobileListVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.035, delayChildren: 0.08 } },
+};
+
+const mobileLinkVariants = {
+  hidden: { opacity: 0, y: 14 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.36, ease: menuEase } },
+};
 
 export function Navbar() {
   const pathname = usePathname();
@@ -68,6 +93,20 @@ export function Navbar() {
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
+  /* close mobile menu with Escape */
+  useEffect(() => {
+    if (!mobileOpen) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMobileOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
   }, [mobileOpen]);
 
   const isExploreActive = exploreLinks.some((l) => pathname === l.href);
@@ -192,52 +231,105 @@ export function Navbar() {
         <button
           type="button"
           aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#d7e8f3] text-[#08213f] transition-colors hover:bg-[#e9f7ff] lg:hidden"
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-navigation-menu"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#b9dff5] bg-white/60 text-[#08213f] shadow-[0_8px_24px_rgba(8,33,63,0.08)] transition-colors hover:bg-[#e9f7ff] lg:hidden"
           onClick={() => setMobileOpen((v) => !v)}
         >
-          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+          <motion.span
+            animate={{ rotate: mobileOpen ? 180 : 0, scale: mobileOpen ? 0.94 : 1 }}
+            transition={{ duration: 0.32, ease: menuEase }}
+            className="inline-flex"
+          >
+            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+          </motion.span>
         </button>
       </div>
 
       {/* ── Mobile Full-Screen Menu ── */}
-      {mobileOpen && (
-        <div className="fixed inset-0 top-[70px] z-40 animate-fade-in overflow-y-auto bg-white lg:hidden">
-          <div className="container pb-8 pt-4">
-            <p className="px-2 pb-2 text-[0.7rem] font-extrabold uppercase tracking-[0.12em] text-[#2382bf]">
-              Menu
-            </p>
-            <div className="grid gap-0.5">
-              {allLinks.map((link) => {
-                const active = pathname === link.href;
-                return (
+      <AnimatePresence>
+        {mobileOpen ? (
+          <motion.div
+            id="mobile-navigation-menu"
+            variants={mobileMenuVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="fixed inset-x-0 top-[70px] z-40 h-[calc(100dvh-70px)] overflow-y-auto bg-[#08213f] text-white lg:hidden"
+          >
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_0%,rgba(35,130,191,0.35),transparent_34%),radial-gradient(circle_at_92%_12%,rgba(244,211,31,0.18),transparent_30%),linear-gradient(180deg,#08213f_0%,#0a345e_52%,#06182e_100%)]" />
+            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#f4d31f]/70 to-transparent" />
+            <motion.div
+              variants={mobilePanelVariants}
+              className="container relative flex min-h-full flex-col px-5 pb-6 pt-5"
+            >
+              <motion.nav
+                variants={mobileListVariants}
+                initial="hidden"
+                animate="visible"
+                className="grid gap-0"
+                aria-label="Mobile navigation"
+              >
+                {allLinks.map((link, index) => {
+                  const active = pathname === link.href;
+                  return (
+                    <motion.div key={link.href} variants={mobileLinkVariants}>
+                      <Link
+                        href={link.href}
+                        className={`group flex items-center justify-between gap-4 border-b border-white/12 px-0 py-2.5 transition-all duration-300 ${
+                          active
+                            ? "text-[#f4d31f]"
+                            : "text-white hover:text-[#f4d31f]"
+                        }`}
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        <span className="flex min-w-0 items-baseline gap-2">
+                          <span className="truncate text-[0.98rem] font-extrabold uppercase leading-none tracking-[0.01em]">
+                            {link.label}
+                          </span>
+                          <span className={`text-[0.58rem] font-bold ${active ? "text-[#fff3a3]" : "text-[#9fcbe6]"}`}>
+                            ({String(index + 1).padStart(2, "0")})
+                          </span>
+                        </span>
+                        <span className={`inline-flex h-7 w-9 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${
+                          active
+                            ? "border-[#f4d31f]/70 bg-[#f4d31f] text-[#08213f]"
+                            : "border-white/22 text-white group-hover:border-[#f4d31f]/60 group-hover:text-[#f4d31f]"
+                        }`}>
+                          <ArrowRight size={14} />
+                        </span>
+                      </Link>
+                    </motion.div>
+                  );
+                })}
+              </motion.nav>
+
+              <div className="mt-auto border-t border-white/14 pt-5">
+                <div>
+                  <p className="text-[0.7rem] font-semibold text-[#c8e4f6]">
+                    Ready to begin?
+                  </p>
                   <Link
-                    key={link.href}
-                    href={link.href}
-                    className={`rounded-xl px-4 py-3.5 text-[0.92rem] font-bold transition-colors ${
-                      active
-                        ? "bg-[#e9f7ff] text-[#0a4f8a]"
-                        : "text-[#08213f] hover:bg-[#f4fbff]"
-                    }`}
+                    href="/admissions"
+                    className="button-primary mt-3 min-h-[42px] w-full text-[0.82rem]"
                     onClick={() => setMobileOpen(false)}
                   >
-                    {link.label}
+                    Apply Now
                   </Link>
-                );
-              })}
-            </div>
-
-            <div className="mt-6 border-t border-[#d7e8f3] pt-6">
-              <Link
-                href="/admissions"
-                className="button-primary w-full"
-                onClick={() => setMobileOpen(false)}
-              >
-                Apply Now
-              </Link>
-            </div>
-          </div>
-        </div>
-      )}
+                  <Link
+                    href={schoolInfo.whatsapp === "#" ? "/contact" : schoolInfo.whatsapp}
+                    className="mt-2 flex items-center justify-center gap-2 rounded-full border border-white/18 px-5 py-2.5 text-[0.82rem] font-extrabold text-white transition-colors hover:bg-white/10"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    <MessageCircle size={15} />
+                    Contact School Admin
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
     </header>
   );
 }
