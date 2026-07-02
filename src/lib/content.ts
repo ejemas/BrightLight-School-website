@@ -1,0 +1,380 @@
+import {
+  BookOpen,
+  Brush,
+  CalendarDays,
+  ClipboardCheck,
+  GraduationCap,
+  HeartHandshake,
+  Home,
+  Landmark,
+  Laptop,
+  LockKeyhole,
+  MapPin,
+  Medal,
+  MessageCircle,
+  Mic2,
+  Music2,
+  Palette,
+  Phone,
+  ShieldCheck,
+  Sparkles,
+  Trophy,
+  Volleyball
+} from "lucide-react";
+
+export const schoolInfo = {
+  name: "The BrightLight Nursery and Primary School",
+  shortName: "BrightLight School",
+  address: "56, Okiti Street, Off Giwa-Amu, Airport Road, Warri, Delta State, Nigeria.",
+  tagline: "Raising Confident, Intelligent, and Morally Sound Children",
+  vision: "To raise confident, intelligent, and morally sound children equipped for global relevance.",
+  mission: "To provide quality education through innovative teaching, godly values, and holistic child development.",
+  phone: "Phone number placeholder",
+  email: "Email address placeholder",
+  whatsapp: "#",
+  founded: "2013"
+};
+
+export const images = {
+  logo: "/images/school/d41f9e69-43fa-4e6e-acac-922d7a54a972.webp",
+  hero: "/images/school/df0da8bd-8339-4ba8-96d7-228ba02ce3c7.webp",
+  about: "/images/school/945567ca-14ff-40bf-aa03-f6b0a9474f2e.webp",
+  welcome: "/images/school/96f3d535-8982-4637-a210-4480dd353eea.webp",
+  academics: "/images/school/0cbd96b2-91ee-4bd9-9c11-ba3164e17285.webp",
+  facilities: "/images/school/92533818-3460-4afc-8b2e-40effb9ffb18.webp",
+  graduation: "/images/school/71fc39f0-a30a-4170-890e-d9c7935fc918.webp",
+  cultural: "/images/school/e3131882-f987-460f-9468-3a6ab9926cce.webp",
+  culturalTwo: "/images/school/f2e40b73-529d-4099-8be6-fb7ee613ac34.webp",
+  classroom: "/images/school/0898d2ed-b6cc-4f74-bc7a-d93aaf8d7d12.webp",
+  event: "/images/school/92533818-3460-4afc-8b2e-40effb9ffb18.webp",
+  pupils: "/images/school/945567ca-14ff-40bf-aa03-f6b0a9474f2e.webp"
+};
+
+export const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/admissions", label: "Admissions" },
+  { href: "/academics", label: "Academics" },
+  { href: "/classes", label: "Classes" },
+  { href: "/facilities", label: "Facilities" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/news-events", label: "News & Events" },
+  { href: "/staff", label: "Staff" },
+  { href: "/contact", label: "Contact" }
+];
+
+export const highlights = [
+  {
+    title: "Qualified Teachers",
+    description: "Our pupils are guided by trained and dedicated teachers committed to academic excellence and child development.",
+    icon: GraduationCap
+  },
+  {
+    title: "Safe Environment",
+    description: "We provide a secure, welcoming, and child-friendly environment where pupils feel safe, valued, and happy to learn.",
+    icon: ShieldCheck
+  },
+  {
+    title: "Modern Learning Facilities",
+    description: "Our classrooms and learning spaces support creativity, participation, and effective teaching.",
+    icon: Laptop
+  },
+  {
+    title: "Moral Development",
+    description: "We nurture children with godly values, discipline, respect, confidence, and strong character.",
+    icon: HeartHandshake
+  }
+];
+
+export const coreValues = [
+  ["Holistic Development", "A congenial learning environment for the holistic development of each pupil."],
+  ["Quality Care and Teaching", "Vital care through qualified and trained teachers applying strong educational practices."],
+  ["Discipline and Ethics", "Discipline and ethical practices within the school environment while promoting pupil welfare."],
+  ["Welcoming Atmosphere", "A welcoming atmosphere where children, staff, parents, and visitors feel valued."],
+  ["Safety and Security", "A school environment where pupils feel safe, secure, and happy to come to school."],
+  ["Academic Excellence", "Talented staff provide each pupil with rigorous standards and high-quality academics."]
+];
+
+export const admissionSteps = [
+  ["Enquiry and Form Collection", "Parents or guardians contact the school or visit the premises to make enquiries and pick up the admission/application form."],
+  ["Submit Required Documents", "Submit the child birth certificate, recent passport photographs, transfer letter where applicable, and other requested documents."],
+  ["Payment of Application/Form Fee", "A non-refundable application/form fee is required. The exact amount is available from the school administration."],
+  ["Entrance Assessment", "The child takes a handwritten and oral assessment suitable for Nursery or Primary placement."],
+  ["Admission Review and Placement", "The school reviews the child performance and documents to determine the appropriate class placement."],
+  ["Enrollment Confirmation", "Parents receive information on school fees, uniforms, books, resumption details, and other requirements."]
+];
+
+export const requiredDocuments = [
+  "Completed admission form",
+  "Child birth certificate",
+  "Recent passport photographs",
+  "Transfer letter, where applicable",
+  "Evidence of payment for the application/form fee",
+  "Any other documents requested by the school admin"
+];
+
+export const nurseryFocus = [
+  "Early reading and phonics",
+  "Number recognition and basic mathematics",
+  "Fine and gross motor skills",
+  "Social interaction",
+  "Communication skills",
+  "Creativity and imagination",
+  "Moral instruction",
+  "Basic science and environmental awareness"
+];
+
+export const primaryFocus = [
+  "English Language",
+  "Mathematics",
+  "Basic Science",
+  "Social Studies",
+  "Civic Education",
+  "Christian Religious Studies / Moral Instruction",
+  "Computer Studies / ICT",
+  "Creative Arts",
+  "Physical and Health Education",
+  "Verbal and Quantitative Reasoning"
+];
+
+export const subjects = [
+  "English Language",
+  "Mathematics",
+  "Basic Science",
+  "Social Studies",
+  "Civic Education",
+  "Computer Studies / ICT",
+  "Creative Arts",
+  "Physical and Health Education",
+  "Christian Religious Studies / Moral Instruction",
+  "Verbal Reasoning",
+  "Quantitative Reasoning",
+  "Handwriting / Phonics"
+];
+
+export const classes = [
+  {
+    title: "Creche",
+    description: "A safe, caring, and nurturing environment for very young children with attentive care and early social interaction.",
+    icon: Home
+  },
+  {
+    title: "Pre-Nursery",
+    description: "Structured learning through play, songs, stories, simple activities, and guided interaction.",
+    icon: Sparkles
+  },
+  {
+    title: "Nursery 1-3",
+    description: "Early literacy, numeracy, communication, confidence, creativity, and moral development.",
+    icon: BookOpen
+  },
+  {
+    title: "Primary 1-5",
+    description: "Strong academic training, discipline, moral instruction, creativity, and confidence-building.",
+    icon: Medal
+  }
+];
+
+export const facilities = [
+  {
+    title: "Spacious and Conducive Classrooms",
+    description: "Comfortable, organized classrooms that help teaching and learning thrive.",
+    image: "/images/school/83ff1ace-f8a8-4388-a3b1-eb08a376431e.webp",
+    icon: Landmark
+  },
+  {
+    title: "ICT Lab",
+    description: "A learning space for basic computer knowledge, digital skills, and technology-supported learning.",
+    image: "/images/school/95fe186a-13d6-4d7d-9655-5d237e8a9095.webp",
+    icon: Laptop
+  },
+  {
+    title: "Playground",
+    description: "Space for pupils to play, exercise, interact, and develop physically and socially.",
+    image: images.pupils,
+    icon: Volleyball
+  },
+  {
+    title: "Security System",
+    description: "A structured school environment that helps pupils feel protected and cared for.",
+    image: images.welcome,
+    icon: LockKeyhole
+  },
+  {
+    title: "Art Room",
+    description: "A creative space for drawing, painting, crafts, imagination, and self-expression.",
+    image: "/images/school/a36cc9ec-01b7-4479-9d60-cdea1d46caf5.webp",
+    icon: Brush
+  }
+];
+
+export const activities = [
+  ["Music", "Pupils develop rhythm, confidence, creativity, and self-expression through music.", Music2],
+  ["Dance", "Dance activities build confidence, coordination, creativity, and cultural expression.", Sparkles],
+  ["Sports", "Sports promote teamwork, discipline, physical fitness, and healthy competition.", Trophy],
+  ["Debate", "Debate helps pupils build confidence, public speaking, critical thinking, and communication skills.", Mic2],
+  ["Drama", "Drama develops creativity, confidence, teamwork, and self-expression.", Palette],
+  ["Excursions", "Excursions expose pupils to real-world learning beyond the classroom.", MapPin]
+] as const;
+
+export const galleryCategories = [
+  "Classroom Activities",
+  "Graduation",
+  "Sports Day",
+  "Cultural Day",
+  "Excursions",
+  "Special Events"
+];
+
+export const galleryItems = [
+  { category: "Classroom Activities", src: images.academics, alt: "Pupils seated in a learning circle" },
+  { category: "Classroom Activities", src: images.classroom, alt: "BrightLight pupils during school activity" },
+  { category: "Classroom Activities", src: "/images/school/09cc1b17-b792-492a-a803-89c1a821ed5a.webp", alt: "Pupils taking part in a school learning moment" },
+  { category: "Graduation", src: images.graduation, alt: "BrightLight pupil speaking during graduation" },
+  { category: "Graduation", src: "/images/school/765913dd-c489-4643-8d0d-810f6eee0945.webp", alt: "Graduation event at BrightLight School" },
+  { category: "Graduation", src: "/images/school/71fc39f0-a30a-4170-890e-d9c7935fc918.webp", alt: "Graduation ceremony backdrop and pupil" },
+  { category: "Sports Day", src: images.pupils, alt: "Pupils standing together outdoors" },
+  { category: "Sports Day", src: "/images/school/96f3d535-8982-4637-a210-4480dd353eea.webp", alt: "Group of pupils in outdoor activity" },
+  { category: "Cultural Day", src: images.cultural, alt: "Pupils in cultural attire" },
+  { category: "Cultural Day", src: images.culturalTwo, alt: "Pupils performing cultural activities" },
+  { category: "Cultural Day", src: "/images/school/d5148284-e7fa-457a-9abc-2cc51d32f48c.webp", alt: "BrightLight cultural presentation" },
+  { category: "Excursions", src: "/images/school/2d820404-4691-408d-a71e-3e48a8c74c87.webp", alt: "Pupils during an outing or activity" },
+  { category: "Excursions", src: "/images/school/f9c371e7-840a-4b84-bc92-120ef27463a9.webp", alt: "Pupils gathered during school activity" },
+  { category: "Special Events", src: images.event, alt: "Parents and pupils at a school event" },
+  { category: "Special Events", src: "/images/school/b02b94e1-5b00-4ca3-b572-d7ca7de6e3aa.webp", alt: "BrightLight school special event" }
+];
+
+export const events = [
+  ["Resumption Dates", "Updates on school resumption dates for each term.", "Date to be announced"],
+  ["Inter-House Sports", "Information about upcoming inter-house sports activities and dates.", "Coming soon"],
+  ["PTA Meetings", "Important updates and meeting dates for parents and teachers.", "Date to be announced"],
+  ["Graduation Ceremonies", "Announcements and highlights from graduation ceremonies.", "Coming soon"],
+  ["Holiday Notices", "School holiday announcements and important notices for parents.", "Date to be announced"]
+];
+
+export const testimonials = [
+  {
+    quote: "The BrightLight School has been a blessing to our family. My child has improved academically and also grown in confidence and discipline.",
+    name: "Parent Initials",
+    role: "Parent"
+  },
+  {
+    quote: "The teachers are caring, patient, and committed. I love the way the school combines academics with moral values.",
+    name: "Parent Initials",
+    role: "Guardian"
+  },
+  {
+    quote: "My child is always excited to go to school. The environment is safe, welcoming, and very supportive.",
+    name: "Parent Initials",
+    role: "Parent"
+  }
+];
+
+export const staffProfiles = [
+  {
+    name: "Principal Name Placeholder",
+    role: "Principal",
+    image: images.welcome,
+    bio: "The Principal provides academic and administrative leadership, ensuring that pupils receive quality education in a disciplined, safe, and nurturing environment."
+  },
+  {
+    name: "School Admin Name Placeholder",
+    role: "School Admin",
+    image: images.event,
+    bio: "The school admin team supports daily operations, communication with parents, admission enquiries, and smooth school management."
+  },
+  {
+    name: "Class Teacher Name Placeholder",
+    role: "Class Teachers",
+    image: images.classroom,
+    bio: "Our class teachers are trained, caring, and committed to helping each child learn, grow, and develop confidence."
+  },
+  {
+    name: "Support Staff Name Placeholder",
+    role: "Support Staff",
+    image: images.facilities,
+    bio: "Our support staff help maintain a clean, safe, and organized school environment for pupils, teachers, and visitors."
+  }
+];
+
+export const faqs = [
+  ["What age do you accept?", "We accept children into our creche, pre-nursery, nursery, and primary sections. Parents can contact the school admin for proper placement based on age and learning level."],
+  ["What curriculum do you use?", "We use a balanced curriculum that supports literacy, numeracy, creativity, moral instruction, social development, and practical learning."],
+  ["Is transport available?", "Transport information should be confirmed directly with the school admin. This placeholder can be updated when the school provides a final response."],
+  ["What are the school hours?", "School hours should be confirmed with the school admin. This placeholder can be updated when the official time is provided."],
+  ["Do you provide meals?", "Meal information should be confirmed directly with the school admin. This placeholder can be updated when the school provides a final response."]
+];
+
+export const quickActions = [
+  {
+    title: "Apply Now",
+    description: "Start your child admission journey with us.",
+    href: "/admissions",
+    icon: ClipboardCheck
+  },
+  {
+    title: "Book a Visit",
+    description: "Schedule a visit to experience our learning environment.",
+    href: "/contact?type=Book%20a%20Visit",
+    icon: CalendarDays
+  },
+  {
+    title: "Contact Us",
+    description: "Speak with our school admin for enquiries and support.",
+    href: "/contact",
+    icon: Phone
+  }
+];
+
+export const contactOptions = [
+  "Admission Enquiry",
+  "Book a Visit",
+  "School Fees Enquiry",
+  "General Enquiry"
+];
+
+export const footerLinks = [
+  { label: "Apply Now", href: "/admissions" },
+  { label: "Book a Visit", href: "/contact?type=Book%20a%20Visit" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "FAQ", href: "/faq" }
+];
+
+export const contactCards = [
+  { title: "Visit Us", value: schoolInfo.address, icon: MapPin },
+  { title: "Call", value: schoolInfo.phone, icon: Phone },
+  { title: "WhatsApp", value: "WhatsApp link placeholder", icon: MessageCircle }
+];
+
+export const accreditationPlaceholders = [
+  "Official approval placeholder",
+  "Accreditation document placeholder",
+  "Awards and recognition placeholder"
+];
+
+export const stats = [
+  ["2013", "Founded"],
+  ["Nursery - Primary", "Sections"],
+  ["Warri", "Delta State"],
+  ["Holistic", "Learning Focus"]
+];
+
+export const teachingMethods = [
+  "Interactive classroom teaching",
+  "Group activities",
+  "Storytelling and demonstrations",
+  "Practical learning",
+  "Creative exercises",
+  "Play-based learning for younger children",
+  "Continuous teacher guidance",
+  "Moral and character-building lessons"
+];
+
+export const socialLinks = ["Facebook placeholder", "Instagram placeholder", "TikTok placeholder", "LinkedIn placeholder"];
+
+export const pageSeo = {
+  home: {
+    title: "The BrightLight Nursery and Primary School | Nursery and Primary School in Warri",
+    description: "The BrightLight Nursery and Primary School is a nursery and primary school in Warri, Delta State, committed to raising confident, intelligent, and morally sound children through quality education, godly values, and holistic child development."
+  }
+};
