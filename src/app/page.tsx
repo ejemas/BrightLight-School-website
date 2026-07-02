@@ -24,11 +24,11 @@ export default function HomePage() {
 
         <div className="container relative grid min-h-[calc(100vh-70px)] items-center gap-10 py-16 lg:grid-cols-[1fr_0.72fr]">
           <MotionSection>
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-extrabold text-[#f4d31f] backdrop-blur-sm">
-              <span className="h-2 w-2 rounded-full bg-[#f4d31f] animate-pulse" />
+            <div className="inline-flex flex-col items-start gap-2 text-sm font-extrabold text-[#f4d31f]">
+              <span className="h-[2px] w-12 rounded-full bg-gradient-to-r from-[#2382bf] to-[#f4d31f]" />
               Premium nursery and primary education in Warri
             </div>
-            <h1 className="mt-7 max-w-[680px] text-4xl font-extrabold leading-[1.06] tracking-tight sm:text-5xl lg:text-[3.6rem]">{schoolInfo.tagline}</h1>
+            <h1 className="mt-5 max-w-[680px] text-4xl font-extrabold leading-[1.06] tracking-tight sm:text-5xl lg:text-[3.6rem]">{schoolInfo.tagline}</h1>
             <p className="mt-6 max-w-xl text-[1.05rem] leading-8 text-[#c8e4f6]">
               At The BrightLight Nursery and Primary School, we provide a safe, nurturing, and inspiring learning environment where every child is guided to grow academically, morally, socially, and spiritually.
             </p>
