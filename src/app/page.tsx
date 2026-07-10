@@ -5,6 +5,7 @@ import { CtaBand } from "@/components/cta-band";
 import { ImageCard } from "@/components/image-card";
 import { InfoCard } from "@/components/info-card";
 import { MotionSection } from "@/components/motion-section";
+import { SchoolVideoShowcase } from "@/components/school-video-showcase";
 import { SectionHeading } from "@/components/section-heading";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { facilities, highlights, images, quickActions, schoolInfo, stats, testimonials } from "@/lib/content";
@@ -55,6 +56,9 @@ export default function HomePage() {
           <path d="M0 72L60 60C120 48 240 24 360 18C480 12 600 24 720 30C840 36 960 36 1080 30C1200 24 1320 12 1380 6L1440 0V72H1380C1320 72 1200 72 1080 72C960 72 840 72 720 72C600 72 480 72 360 72C240 72 120 72 60 72H0Z" fill="white"/>
         </svg>
       </section>
+
+      {/* ══════ School Video Tour ══════ */}
+      <SchoolVideoShowcase />
 
       {/* ══════ Quick Actions ══════ */}
       <section className="section-tight relative overflow-hidden blue-band">

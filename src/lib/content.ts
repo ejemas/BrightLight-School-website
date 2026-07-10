@@ -9,6 +9,7 @@ import {
   Landmark,
   Laptop,
   LockKeyhole,
+  Mail,
   MapPin,
   Medal,
   MessageCircle,
@@ -30,7 +31,7 @@ export const schoolInfo = {
   vision: "To raise confident, intelligent, and morally sound children equipped for global relevance.",
   mission: "To provide quality education through innovative teaching, godly values, and holistic child development.",
   phone: "Phone number placeholder",
-  email: "Email address placeholder",
+  email: "brightlightschool101@gmail.com",
   whatsapp: "#",
   founded: "2013"
 };
@@ -115,8 +116,10 @@ export const requiredDocuments = [
 
 export const nurseryFocus = [
   "Early reading and phonics",
+  "Literacy",
   "Number recognition and basic mathematics",
   "Fine and gross motor skills",
+  "Physical Development",
   "Social interaction",
   "Communication skills",
   "Creativity and imagination",
@@ -132,6 +135,8 @@ export const primaryFocus = [
   "Civic Education",
   "Christian Religious Studies / Moral Instruction",
   "Computer Studies / ICT",
+  "French",
+  "Phonics",
   "Creative Arts",
   "Physical and Health Education",
   "Verbal and Quantitative Reasoning"
@@ -144,6 +149,8 @@ export const subjects = [
   "Social Studies",
   "Civic Education",
   "Computer Studies / ICT",
+  "French",
+  "Phonics",
   "Creative Arts",
   "Physical and Health Education",
   "Christian Religious Studies / Moral Instruction",
@@ -343,6 +350,7 @@ export const footerLinks = [
 export const contactCards = [
   { title: "Visit Us", value: schoolInfo.address, icon: MapPin },
   { title: "Call", value: schoolInfo.phone, icon: Phone },
+  { title: "School Email", value: schoolInfo.email, icon: Mail },
   { title: "WhatsApp", value: "WhatsApp link placeholder", icon: MessageCircle }
 ];
 
@@ -366,6 +374,7 @@ export const teachingMethods = [
   "Practical learning",
   "Creative exercises",
   "Play-based learning for younger children",
+  "Circle Time Activities",
   "Continuous teacher guidance",
   "Moral and character-building lessons"
 ];
