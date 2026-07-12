@@ -1,17 +1,14 @@
 import {
-  BookOpen,
   Brush,
   CalendarDays,
   ClipboardCheck,
   GraduationCap,
   HeartHandshake,
-  Home,
   Landmark,
   Laptop,
   LockKeyhole,
   Mail,
   MapPin,
-  Medal,
   MessageCircle,
   Mic2,
   Music2,
@@ -30,9 +27,9 @@ export const schoolInfo = {
   tagline: "Raising Confident, Intelligent, and Morally Sound Children",
   vision: "To raise confident, intelligent, and morally sound children equipped for global relevance.",
   mission: "To provide quality education through innovative teaching, godly values, and holistic child development.",
-  phone: "Phone number placeholder",
+  phone: "08139377306 and 08035486250",
   email: "brightlightschool101@gmail.com",
-  whatsapp: "#",
+  whatsapp: "https://wa.me/2348139377306",
   founded: "2013"
 };
 
@@ -163,22 +160,22 @@ export const classes = [
   {
     title: "Creche",
     description: "A safe, caring, and nurturing environment for very young children with attentive care and early social interaction.",
-    icon: Home
+    image: "/images/school/creche.webp"
   },
   {
     title: "Pre-Nursery",
     description: "Structured learning through play, songs, stories, simple activities, and guided interaction.",
-    icon: Sparkles
+    image: "/images/school/a36cc9ec-01b7-4479-9d60-cdea1d46caf5.webp"
   },
   {
-    title: "Nursery 1-3",
+    title: "Primary 1-3",
     description: "Early literacy, numeracy, communication, confidence, creativity, and moral development.",
-    icon: BookOpen
+    image: "/images/school/pri 1-3.webp"
   },
   {
     title: "Primary 1-5",
     description: "Strong academic training, discipline, moral instruction, creativity, and confidence-building.",
-    icon: Medal
+    image: "/images/school/pri 1-5.webp"
   }
 ];
 
@@ -188,12 +185,6 @@ export const facilities = [
     description: "Comfortable, organized classrooms that help teaching and learning thrive.",
     image: "/images/school/83ff1ace-f8a8-4388-a3b1-eb08a376431e.webp",
     icon: Landmark
-  },
-  {
-    title: "ICT Lab",
-    description: "A learning space for basic computer knowledge, digital skills, and technology-supported learning.",
-    image: "/images/school/95fe186a-13d6-4d7d-9655-5d237e8a9095.webp",
-    icon: Laptop
   },
   {
     title: "Playground",
@@ -262,17 +253,17 @@ export const events = [
 export const testimonials = [
   {
     quote: "The BrightLight School has been a blessing to our family. My child has improved academically and also grown in confidence and discipline.",
-    name: "Parent Initials",
+    name: "Mr Bright",
     role: "Parent"
   },
   {
     quote: "The teachers are caring, patient, and committed. I love the way the school combines academics with moral values.",
-    name: "Parent Initials",
+    name: "Mrs Gladys",
     role: "Guardian"
   },
   {
     quote: "My child is always excited to go to school. The environment is safe, welcoming, and very supportive.",
-    name: "Parent Initials",
+    name: "Mr Francis",
     role: "Parent"
   }
 ];
@@ -351,7 +342,7 @@ export const contactCards = [
   { title: "Visit Us", value: schoolInfo.address, icon: MapPin },
   { title: "Call", value: schoolInfo.phone, icon: Phone },
   { title: "School Email", value: schoolInfo.email, icon: Mail },
-  { title: "WhatsApp", value: "WhatsApp link placeholder", icon: MessageCircle }
+  { title: "WhatsApp", value: schoolInfo.phone, icon: MessageCircle }
 ];
 
 export const accreditationPlaceholders = [

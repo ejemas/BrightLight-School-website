@@ -17,7 +17,6 @@ const exploreLinks = [
   { label: "News & Events", href: "/news-events" },
   { label: "Staff", href: "/staff" },
   { label: "FAQ", href: "/faq" },
-  { label: "Testimonials", href: "/testimonials" },
 ];
 
 export function Footer() {

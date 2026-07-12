@@ -169,7 +169,7 @@ export default function HomePage() {
       {/* ══════ Testimonials ══════ */}
       <section className="section">
         <div className="container">
-          <SectionHeading centered eyebrow="Testimonials" title="What parents say" subtitle="Real parent stories can be added here as the school collects approved reviews." />
+          <SectionHeading centered eyebrow="Testimonials" title="What parents say" subtitle="Hear from parents and guardians who value the care, learning, and support their children receive at BrightLight." />
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {testimonials.map((item) => (
               <TestimonialCard key={item.quote} {...item} />

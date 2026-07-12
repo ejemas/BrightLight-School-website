@@ -7,7 +7,8 @@ type TestimonialCardProps = {
 };
 
 export function TestimonialCard({ quote, name, role }: TestimonialCardProps) {
-  const initial = name.trim().charAt(0).toUpperCase() || "?";
+  const guardianName = name.trim().replace(/^(mr|mrs|ms|dr)\.?\s+/i, "");
+  const initial = guardianName.charAt(0).toUpperCase() || "?";
 
   return (
     <article className="card hover-lift p-7">

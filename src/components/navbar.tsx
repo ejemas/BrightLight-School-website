@@ -23,7 +23,6 @@ const exploreLinks = [
   { href: "/activities", label: "Activities", desc: "Sports, music, drama & more" },
   { href: "/news-events", label: "News & Events", desc: "Updates & announcements" },
   { href: "/staff", label: "Staff", desc: "Meet our dedicated team" },
-  { href: "/testimonials", label: "Testimonials", desc: "What parents say" },
   { href: "/faq", label: "FAQ", desc: "Common questions answered" },
 ];
 
