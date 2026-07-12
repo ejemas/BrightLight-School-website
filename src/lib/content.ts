@@ -270,28 +270,22 @@ export const testimonials = [
 
 export const staffProfiles = [
   {
-    name: "Principal Name Placeholder",
+    name: "Mrs Deborah Uloko",
     role: "Principal",
-    image: images.welcome,
-    bio: "The Principal provides academic and administrative leadership, ensuring that pupils receive quality education in a disciplined, safe, and nurturing environment."
+    image: "/images/school/dc50fa9d-0fc1-42e9-993e-d52d68e0e588.webp",
+    alt: "Mrs Deborah Uloko, Principal"
   },
   {
-    name: "School Admin Name Placeholder",
-    role: "School Admin",
-    image: images.event,
-    bio: "The school admin team supports daily operations, communication with parents, admission enquiries, and smooth school management."
+    name: "Mrs Love Ogboi",
+    role: "Head of Administration",
+    image: "/images/school/360e1b0b-86d0-4fd8-aa29-d15ca46ae053.webp",
+    alt: "Mrs Love Ogboi, Head of Administration"
   },
   {
-    name: "Class Teacher Name Placeholder",
-    role: "Class Teachers",
-    image: images.classroom,
-    bio: "Our class teachers are trained, caring, and committed to helping each child learn, grow, and develop confidence."
-  },
-  {
-    name: "Support Staff Name Placeholder",
-    role: "Support Staff",
-    image: images.facilities,
-    bio: "Our support staff help maintain a clean, safe, and organized school environment for pupils, teachers, and visitors."
+    name: "Staffs",
+    role: "Teaching and Support Team",
+    image: "/images/school/staff.webp",
+    alt: "BrightLight teaching and support staff"
   }
 ];
 

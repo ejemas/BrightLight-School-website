@@ -16,23 +16,27 @@ export default function StaffPage() {
 
       <section className="section">
         <div className="container">
-          <SectionHeading centered eyebrow="Staff Profiles" title="Placeholders ready for real staff details" subtitle="Use these cards until official names, photos, and biographies are provided." />
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <SectionHeading centered eyebrow="Our Team" title="Meet our school leadership and staff" subtitle="A dedicated team committed to helping every BrightLight pupil learn, grow, and thrive." />
+          <div className="mt-14 grid gap-7 md:grid-cols-2 xl:grid-cols-3">
             {staffProfiles.map((staff) => (
-              <article key={staff.role} className="card group overflow-hidden rounded-2xl">
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image
-                    src={staff.image}
-                    alt={staff.role}
-                    fill
-                    className="object-cover transition duration-500 group-hover:scale-105"
-                    sizes="25vw"
-                  />
-                </div>
-                <div className="p-6">
-                  <p className="text-lg font-extrabold text-[#08213f]">{staff.name}</p>
-                  <p className="mt-1 text-sm font-extrabold text-[#0a4f8a]">{staff.role}</p>
-                  <p className="mt-4 text-sm leading-7 text-[#5d6f82]">{staff.bio}</p>
+              <article key={staff.role} className="group relative min-h-[420px] overflow-hidden rounded-2xl shadow-[0_22px_55px_rgba(8,33,63,0.16)]">
+                <Image
+                  src={staff.image}
+                  alt={staff.alt}
+                  fill
+                  className="object-cover transition duration-700 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(35,130,191,0.08)_0%,rgba(10,79,138,0.36)_48%,rgba(8,33,63,0.9)_100%)]" />
+                <div className="absolute left-6 right-6 top-0 h-[3px] rounded-b-full bg-gradient-to-r from-[#2382bf] via-[#7bbddf] to-[#f4d31f]" />
+                <div className="absolute inset-x-5 bottom-5 rounded-2xl border border-white/25 bg-[#0a4f8a]/35 p-5 text-white shadow-[0_16px_38px_rgba(8,33,63,0.2)] backdrop-blur-md">
+                  <div className="flex items-end gap-4">
+                    <span className="h-14 w-[3px] shrink-0 rounded-full bg-gradient-to-b from-[#f4d31f] via-[#7bbddf] to-[#2382bf]" />
+                    <div>
+                      <p className="text-sm font-extrabold uppercase tracking-[0.14em] text-[#d5efff]">{staff.role}</p>
+                      <h3 className="mt-1 text-2xl font-extrabold leading-tight">{staff.name}</h3>
+                    </div>
+                  </div>
                 </div>
               </article>
             ))}
