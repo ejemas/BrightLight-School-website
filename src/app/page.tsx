@@ -155,8 +155,8 @@ export default function HomePage() {
       <section className="section cream-band">
         <div className="container">
           <SectionHeading centered eyebrow="Facilities" title="Learning spaces that support confidence and creativity" subtitle="Explore a visual preview of the school environment parents can trust." />
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {facilities.slice(0, 5).map((facility) => (
+          <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {facilities.map((facility) => (
               <ImageCard key={facility.title} {...facility} />
             ))}
           </div>

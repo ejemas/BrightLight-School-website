@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ExternalLink } from "lucide-react";
 import { images, schoolInfo, socialLinks } from "@/lib/content";
 
 const quickLinks = [
@@ -95,9 +96,16 @@ export function Footer() {
           </p>
           <div className="mt-5 grid gap-3">
             {socialLinks.map((item) => (
-              <span key={item} className="text-sm text-[#a8cfe6]">
-                {item}
-              </span>
+              <a
+                key={item.href}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-fit items-center gap-2 text-sm text-[#a8cfe6] transition-all duration-200 hover:translate-x-1 hover:text-white"
+              >
+                {item.label}
+                <ExternalLink size={13} aria-hidden="true" />
+              </a>
             ))}
           </div>
           <Link href="/admissions" className="button-primary mt-8 min-h-[42px] px-5 text-[0.82rem]">

@@ -2,6 +2,7 @@ import {
   Brush,
   CalendarDays,
   ClipboardCheck,
+  Footprints,
   GraduationCap,
   HeartHandshake,
   Landmark,
@@ -15,7 +16,6 @@ import {
   Palette,
   Phone,
   ShieldCheck,
-  Sparkles,
   Trophy,
   Volleyball
 } from "lucide-react";
@@ -208,7 +208,7 @@ export const facilities = [
 
 export const activities = [
   ["Music", "Pupils develop rhythm, confidence, creativity, and self-expression through music.", Music2],
-  ["Dance", "Dance activities build confidence, coordination, creativity, and cultural expression.", Sparkles],
+  ["Dance", "Dance activities build confidence, coordination, creativity, and cultural expression.", Footprints],
   ["Sports", "Sports promote teamwork, discipline, physical fitness, and healthy competition.", Trophy],
   ["Debate", "Debate helps pupils build confidence, public speaking, critical thinking, and communication skills.", Mic2],
   ["Drama", "Drama develops creativity, confidence, teamwork, and self-expression.", Palette],
@@ -364,7 +364,20 @@ export const teachingMethods = [
   "Moral and character-building lessons"
 ];
 
-export const socialLinks = ["Facebook placeholder", "Instagram placeholder", "TikTok placeholder", "LinkedIn placeholder"];
+export const socialLinks = [
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/brightlightsschool?igsh=MXQyMjk4dXR3emdkYg=="
+  },
+  {
+    label: "TikTok",
+    href: "https://www.tiktok.com/@brightlightschool5?_r=1&_t=ZS-97zaLajVYaw"
+  },
+  {
+    label: "Facebook",
+    href: "https://web.facebook.com/bright.light.231409?mibextid=wwXIfr&rdid=RTvziQM8DalMbYXi&share_url=https%253A%252F%252Fweb.facebook.com%252Fshare%252F1Baach1ifC%252F%253Fmibextid%253DwwXIfr%2526_rdc%253D1%2526_rdr"
+  }
+];
 
 export const pageSeo = {
   home: {
