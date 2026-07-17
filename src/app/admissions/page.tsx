@@ -8,7 +8,7 @@ import { admissionSteps, images, requiredDocuments } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Admissions",
-  description: "Begin your child learning journey with The BrightLight Nursery and Primary School."
+  description: "Begin your child learning journey with The BrightLight International Nursery and Primary School."
 };
 
 export default function AdmissionsPage() {

@@ -31,7 +31,7 @@ export default function HomePage() {
             </div>
             <h1 className="mt-5 max-w-[680px] text-4xl font-extrabold leading-[1.06] tracking-tight sm:text-5xl lg:text-[3.6rem]">{schoolInfo.tagline}</h1>
             <p className="mt-6 max-w-xl text-[1.05rem] leading-8 text-[#c8e4f6]">
-              At The BrightLight Nursery and Primary School, we provide a safe, nurturing, and inspiring learning environment where every child is guided to grow academically, morally, socially, and spiritually.
+              At {schoolInfo.name}, we provide a safe, nurturing, and inspiring learning environment where every child is guided to grow academically, morally, socially, and spiritually.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="/admissions" className="button-primary">Apply Now</Link>
@@ -112,8 +112,8 @@ export default function HomePage() {
               We believe every child has unique gifts and abilities. At BrightLight, learning goes beyond the classroom through a safe, caring, and engaging environment where pupils ask questions, explore ideas, develop talents, and build the right foundation for lifelong success.
             </p>
             <div className="mt-8 border-l-[3px] border-[#f4d31f] pl-5">
-              <p className="font-extrabold text-[#08213f]">Principal&apos;s Name</p>
-              <p className="text-sm font-semibold text-[#5d6f82]">Principal, The BrightLight Nursery and Primary School</p>
+              <p className="font-extrabold text-[#08213f]">Mrs Deborah Uloko</p>
+              <p className="text-sm font-semibold text-[#5d6f82]">Principal, {schoolInfo.name}</p>
             </div>
           </MotionSection>
         </div>
@@ -178,7 +178,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <CtaBand title="Admission is Open" text="Begin your child journey at The BrightLight Nursery and Primary School. Our admission process is simple, clear, and designed to help us place each child in the right class." href="/admissions" label="View Admission Process" />
+      <CtaBand title="Admission is Open" text={`Begin your child journey at ${schoolInfo.name}. Our admission process is simple, clear, and designed to help us place each child in the right class.`} href="/admissions" label="View Admission Process" />
     </>
   );
 }

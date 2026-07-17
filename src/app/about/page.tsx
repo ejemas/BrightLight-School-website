@@ -5,11 +5,11 @@ import { CtaBand } from "@/components/cta-band";
 import { MotionSection } from "@/components/motion-section";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
-import { coreValues, images, schoolInfo } from "@/lib/content";
+import { boardMembers, chairmanProfile, coreValues, images, schoolInfo } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Learn about The BrightLight Nursery and Primary School history, vision, mission, values, and leadership."
+  description: "Learn about The BrightLight International Nursery and Primary School history, vision, mission, values, and leadership."
 };
 
 const coreValueImages = [
@@ -39,25 +39,10 @@ const coreValueImages = [
   }
 ];
 
-const boardMembers = [
-  {
-    name: "Mrs Deborah Uloko",
-    role: "Principal",
-    image: "/images/school/dc50fa9d-0fc1-42e9-993e-d52d68e0e588.webp",
-    alt: "Mrs Deborah Uloko, Principal"
-  },
-  {
-    name: "Mrs Love Ogboi",
-    role: "Head of Administration",
-    image: "/images/school/360e1b0b-86d0-4fd8-aa29-d15ca46ae053.webp",
-    alt: "Mrs Love Ogboi, Head of Administration"
-  }
-];
-
 export default function AboutPage() {
   return (
     <>
-      <PageHero eyebrow="About Us" title="About The BrightLight Nursery and Primary School" subtitle="A school committed to academic excellence, discipline, godly values, and the holistic development of every child." image={images.about} />
+      <PageHero eyebrow="About Us" title={`About ${schoolInfo.name}`} subtitle="A school committed to academic excellence, discipline, godly values, and the holistic development of every child." image={images.about} />
 
       <section className="section">
         <div className="container grid gap-12 lg:grid-cols-[1fr_0.85fr]">
@@ -122,27 +107,45 @@ export default function AboutPage() {
       </section>
 
       <section className="section cream-band">
-        <div className="container grid gap-12 lg:grid-cols-2">
-          <div>
+        <div className="container">
+          <div className="max-w-3xl">
             <SectionHeading eyebrow="Philosophy" title="Education beyond memorization" subtitle="Every child deserves a learning experience that builds intelligence, confidence, discipline, creativity, and strong moral character." />
             <p className="section-lead">We combine academic excellence with moral instruction, godly values, creativity, and social development to prepare our pupils for future success.</p>
           </div>
-          <div className="card p-8">
-            <p className="eyebrow">Message from the Chairman</p>
-            <h3 className="mt-3 text-2xl font-extrabold text-[#08213f] sm:text-3xl">Welcome to our school.</h3>
-            <p className="mt-5 text-sm leading-7 text-[#5d6f82]">Our vision is to provide every child with a strong educational foundation in a safe, nurturing, and inspiring environment. We are committed to helping each child discover, develop, and maximize their potential through quality education, moral instruction, and innovative learning methods.</p>
-            <div className="mt-6 border-l-[3px] border-[#f4d31f] pl-5">
-              <p className="font-extrabold text-[#08213f]">Gbenga Joseph Ukanah</p>
-              <p className="text-sm font-semibold text-[#0a4f8a]">Chairman</p>
-            </div>
-          </div>
+          <MotionSection delay={0.08} className="mt-12">
+            <article className="overflow-hidden rounded-2xl border border-[#d5efff] bg-white shadow-[0_22px_55px_rgba(8,33,63,0.12)]">
+              <div className="grid md:grid-cols-[0.78fr_1.22fr]">
+                <div className="relative min-h-[360px] overflow-hidden md:min-h-[460px]">
+                  <Image
+                    src={chairmanProfile.image}
+                    alt={chairmanProfile.alt}
+                    fill
+                    className="object-cover object-[center_28%] transition duration-700 hover:scale-[1.03]"
+                    sizes="(max-width: 768px) 100vw, 42vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#08213f]/30 via-transparent to-transparent" />
+                  <div className="absolute inset-x-6 top-0 h-[3px] rounded-b-full bg-gradient-to-r from-[#2382bf] via-[#7bbddf] to-[#f4d31f]" />
+                </div>
+                <div className="relative flex flex-col justify-center p-7 sm:p-10 lg:p-12">
+                  <div className="absolute left-7 right-7 top-0 h-[3px] rounded-b-full bg-gradient-to-r from-[#2382bf] via-[#7bbddf] to-[#f4d31f] md:left-10 md:right-10 lg:left-12 lg:right-12" />
+                  <p className="eyebrow">Message from the Chairman</p>
+                  <h3 className="mt-3 text-2xl font-extrabold text-[#08213f] sm:text-3xl">Welcome to our school.</h3>
+                  <p className="mt-5 text-sm leading-7 text-[#5d6f82]">Our vision is to provide every child with a strong educational foundation in a safe, nurturing, and inspiring environment. We are committed to helping each child discover, develop, and maximize their potential through quality education, moral instruction, and innovative learning methods.</p>
+                  <div className="mt-7 border-l-[3px] border-[#f4d31f] pl-5">
+                    <p className="font-extrabold text-[#08213f]">{chairmanProfile.name}</p>
+                    <p className="text-sm font-semibold text-[#0a4f8a]">{chairmanProfile.role}</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </MotionSection>
         </div>
       </section>
 
       <section className="section">
         <div className="container">
           <SectionHeading centered eyebrow="Leadership" title="Our Board" />
-          <div className="mx-auto mt-12 grid max-w-5xl gap-7 md:grid-cols-2">
+          <div className="mx-auto mt-12 grid max-w-6xl gap-7 md:grid-cols-2 xl:grid-cols-3">
             {boardMembers.map((member) => (
               <article key={member.name} className="group relative min-h-[440px] overflow-hidden rounded-2xl shadow-[0_22px_55px_rgba(8,33,63,0.16)]">
                 <Image
@@ -150,7 +153,7 @@ export default function AboutPage() {
                   alt={member.alt}
                   fill
                   className="object-cover transition duration-700 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(35,130,191,0.08)_0%,rgba(10,79,138,0.36)_48%,rgba(8,33,63,0.9)_100%)]" />
                 <div className="absolute left-6 right-6 top-0 h-[3px] rounded-b-full bg-gradient-to-r from-[#2382bf] via-[#7bbddf] to-[#f4d31f]" />

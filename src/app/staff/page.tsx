@@ -17,9 +17,12 @@ export default function StaffPage() {
       <section className="section">
         <div className="container">
           <SectionHeading centered eyebrow="Our Team" title="Meet our school leadership and staff" subtitle="A dedicated team committed to helping every BrightLight pupil learn, grow, and thrive." />
-          <div className="mt-14 grid gap-7 md:grid-cols-2 xl:grid-cols-3">
-            {staffProfiles.map((staff) => (
-              <article key={staff.role} className="group relative min-h-[420px] overflow-hidden rounded-2xl shadow-[0_22px_55px_rgba(8,33,63,0.16)]">
+          <div className="mt-14 grid gap-7 md:grid-cols-2 xl:grid-cols-6">
+            {staffProfiles.map((staff, index) => (
+              <article
+                key={staff.role}
+                className={`group relative min-h-[420px] overflow-hidden rounded-2xl shadow-[0_22px_55px_rgba(8,33,63,0.16)] xl:col-span-2 ${index === 3 ? "xl:col-start-2" : ""}`}
+              >
                 <Image
                   src={staff.image}
                   alt={staff.alt}

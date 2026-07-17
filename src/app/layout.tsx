@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description: pageSeo.home.description,
   keywords: [
     "Nursery and Primary School in Warri",
-    "BrightLight Nursery and Primary School",
+    "BrightLight International Nursery and Primary School",
     "Quality education in Warri",
     "Nursery school in Delta State",
     "Primary school in Warri",

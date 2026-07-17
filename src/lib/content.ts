@@ -21,14 +21,14 @@ import {
 } from "lucide-react";
 
 export const schoolInfo = {
-  name: "The BrightLight Nursery and Primary School",
+  name: "The BrightLight International Nursery and Primary School",
   shortName: "BrightLight School",
   address: "56, Okiti Street, Off Giwa-Amu, Airport Road, Warri, Delta State, Nigeria.",
   tagline: "Raising Confident, Intelligent, and Morally Sound Children",
   vision: "To raise confident, intelligent, and morally sound children equipped for global relevance.",
   mission: "To provide quality education through innovative teaching, godly values, and holistic child development.",
   phone: "08139377306 and 08035486250",
-  email: "brightlightschool101@gmail.com",
+  email: "brightlightschool12@gmail.com",
   whatsapp: "https://wa.me/2348139377306",
   founded: "2013"
 };
@@ -268,7 +268,13 @@ export const testimonials = [
   }
 ];
 
-export const staffProfiles = [
+export const boardMembers = [
+  {
+    name: "Mrs Yvonne Ukanah",
+    role: "Director",
+    image: "/images/school/Director.webp",
+    alt: "Mrs Yvonne Ukanah, Director"
+  },
   {
     name: "Mrs Deborah Uloko",
     role: "Principal",
@@ -280,7 +286,19 @@ export const staffProfiles = [
     role: "Head of Administration",
     image: "/images/school/360e1b0b-86d0-4fd8-aa29-d15ca46ae053.webp",
     alt: "Mrs Love Ogboi, Head of Administration"
-  },
+  }
+];
+
+export const chairmanProfile = {
+  name: "Mr Joseph Ukanah",
+  role: "Chairman",
+  image: "/images/school/Chairman.webp",
+  alt: "Mr Joseph Ukanah, Chairman"
+};
+
+export const staffProfiles = [
+  ...boardMembers,
+  chairmanProfile,
   {
     name: "Staffs",
     role: "Teaching and Support Team",
@@ -381,7 +399,7 @@ export const socialLinks = [
 
 export const pageSeo = {
   home: {
-    title: "The BrightLight Nursery and Primary School | Nursery and Primary School in Warri",
-    description: "The BrightLight Nursery and Primary School is a nursery and primary school in Warri, Delta State, committed to raising confident, intelligent, and morally sound children through quality education, godly values, and holistic child development."
+    title: "The BrightLight International Nursery and Primary School | Nursery and Primary School in Warri",
+    description: "The BrightLight International Nursery and Primary School is a nursery and primary school in Warri, Delta State, committed to raising confident, intelligent, and morally sound children through quality education, godly values, and holistic child development."
   }
 };

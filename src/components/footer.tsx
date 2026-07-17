@@ -118,7 +118,7 @@ export function Footer() {
       <div className="border-t border-white/8">
         <div className="container py-6 text-center">
           <p className="text-xs font-medium text-[#6b9fc0]">
-            © 2026 The BrightLight Nursery and Primary School. All rights reserved.
+            © 2026 The BrightLight International Nursery and Primary School. All rights reserved.
           </p>
         </div>
       </div>
