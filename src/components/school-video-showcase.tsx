@@ -8,13 +8,22 @@ export function SchoolVideoShowcase() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
 
-  function togglePlay() {
-    if (!videoRef.current) return;
-    if (videoRef.current.paused) {
-      videoRef.current.play();
-      setPlaying(true);
+  async function togglePlay() {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (video.paused) {
+      video.muted = false;
+      video.defaultMuted = false;
+      video.volume = 1;
+
+      try {
+        await video.play();
+      } catch {
+        setPlaying(false);
+      }
     } else {
-      videoRef.current.pause();
+      video.pause();
       setPlaying(false);
     }
   }
@@ -72,7 +81,6 @@ export function SchoolVideoShowcase() {
                   src="/images/school-video/school-environs.mov"
                   playsInline
                   loop
-                  muted
                   preload="metadata"
                   onPlay={() => setPlaying(true)}
                   onPause={() => setPlaying(false)}
