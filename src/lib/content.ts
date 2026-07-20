@@ -297,8 +297,8 @@ export const chairmanProfile = {
 };
 
 export const staffProfiles = [
-  ...boardMembers,
   chairmanProfile,
+  ...boardMembers,
   {
     name: "Staffs",
     role: "Teaching and Support Team",
