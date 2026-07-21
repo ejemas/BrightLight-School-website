@@ -134,7 +134,7 @@ export function Navbar() {
             priority
           />
           <div className="min-w-0">
-            <p className="truncate text-[0.88rem] font-extrabold leading-tight text-[#08213f]">
+            <p className="max-w-[155px] whitespace-normal text-[0.7rem] font-extrabold leading-[1.15] text-[#08213f] sm:max-w-none sm:whitespace-nowrap sm:text-[0.88rem] sm:leading-tight">
               {schoolInfo.shortName}
             </p>
             <p className="hidden text-[0.68rem] font-semibold text-[#2382bf] sm:block">

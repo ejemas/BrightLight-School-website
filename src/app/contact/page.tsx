@@ -8,7 +8,7 @@ import { contactCards, images, schoolInfo } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Contact BrightLight for admission enquiries, school visits, and general information."
+  description: "Contact Brightlight International School for admission enquiries, school visits, and general information."
 };
 
 export default function ContactPage() {

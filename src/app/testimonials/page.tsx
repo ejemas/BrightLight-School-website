@@ -6,13 +6,13 @@ import { images, testimonials } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Testimonials",
-  description: "Hear from parents and guardians who trust The BrightLight International Nursery and Primary School."
+  description: "Hear from parents and guardians who trust Brightlight International School."
 };
 
 export default function TestimonialsPage() {
   return (
     <>
-      <PageHero eyebrow="Testimonials" title="What Parents Say" subtitle="Hear from parents and guardians who trust The BrightLight International Nursery and Primary School." image={images.pupils} />
+      <PageHero eyebrow="Testimonials" title="What Parents Say" subtitle="Hear from parents and guardians who trust Brightlight International School." image={images.pupils} />
 
       <section className="section">
         <div className="container">

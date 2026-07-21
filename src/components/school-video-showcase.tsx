@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { Play, Pause } from "lucide-react";
 import { MotionSection } from "@/components/motion-section";
+import { schoolInfo } from "@/lib/content";
 
 export function SchoolVideoShowcase() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -40,7 +41,7 @@ export function SchoolVideoShowcase() {
           <p className="eyebrow">School Tour</p>
 
           <h2 className="section-title mt-4">
-            Experience the BrightLight environment
+            Experience the {schoolInfo.name} environment
           </h2>
 
           <p className="section-lead">

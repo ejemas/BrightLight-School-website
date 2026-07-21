@@ -6,7 +6,7 @@ import { images, staffProfiles } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Our Staff",
-  description: "Meet the dedicated team guiding and nurturing BrightLight pupils."
+  description: "Meet the dedicated team guiding and nurturing Brightlight International School pupils."
 };
 
 export default function StaffPage() {
@@ -16,7 +16,7 @@ export default function StaffPage() {
 
       <section className="section">
         <div className="container">
-          <SectionHeading centered eyebrow="Our Team" title="Meet our school leadership and staff" subtitle="A dedicated team committed to helping every BrightLight pupil learn, grow, and thrive." />
+          <SectionHeading centered eyebrow="Our Team" title="Meet our school leadership and staff" subtitle="A dedicated team committed to helping every pupil learn, grow, and thrive." />
           <div className="mt-14 grid gap-7 md:grid-cols-2 xl:grid-cols-6">
             {staffProfiles.map((staff, index) => (
               <article

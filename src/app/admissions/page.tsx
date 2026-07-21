@@ -4,17 +4,17 @@ import { CtaBand } from "@/components/cta-band";
 import { CheckList } from "@/components/check-list";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
-import { admissionSteps, images, requiredDocuments } from "@/lib/content";
+import { admissionSteps, images, requiredDocuments, schoolInfo } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Admissions",
-  description: "Begin your child learning journey with The BrightLight International Nursery and Primary School."
+  description: "Begin your child's learning journey with Brightlight International School."
 };
 
 export default function AdmissionsPage() {
   return (
     <>
-      <PageHero eyebrow="Admissions" title="Begin your child learning journey with BrightLight" subtitle="Our admission process is simple, clear, and designed to help us place each child in the right class based on age, ability, and learning readiness." image={images.graduation}>
+      <PageHero eyebrow="Admissions" title={`Begin your child's learning journey with ${schoolInfo.name}`} subtitle="Our admission process is simple, clear, and designed to help us place each child in the right class based on age, ability, and learning readiness." image={images.graduation}>
         <Link href="/contact?type=Admission%20Enquiry" className="button-primary">Apply Now</Link>
       </PageHero>
 
@@ -66,7 +66,7 @@ export default function AdmissionsPage() {
         </div>
       </section>
 
-      <CtaBand title="Book a visit to BrightLight" text="Experience the school environment and speak with the admin team about your child placement." href="/contact?type=Book%20a%20Visit" label="Book a Visit" />
+      <CtaBand title={`Book a visit to ${schoolInfo.name}`} text="Experience the school environment and speak with the admin team about your child's placement." href="/contact?type=Book%20a%20Visit" label="Book a Visit" />
     </>
   );
 }

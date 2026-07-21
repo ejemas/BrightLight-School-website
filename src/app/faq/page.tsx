@@ -5,13 +5,13 @@ import { images } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
-  description: "Answers to common parent questions about BrightLight School."
+  description: "Answers to common parent questions about Brightlight International School."
 };
 
 export default function FaqPage() {
   return (
     <>
-      <PageHero eyebrow="FAQ" title="Frequently Asked Questions" subtitle="Answers to common parent questions about BrightLight School." image={images.about} />
+      <PageHero eyebrow="FAQ" title="Frequently Asked Questions" subtitle="Answers to common parent questions about Brightlight International School." image={images.about} />
 
       <section className="section">
         <div className="container">

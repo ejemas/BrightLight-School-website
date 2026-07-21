@@ -49,7 +49,7 @@ function CurriculumCard({
 export default function AcademicsPage() {
   return (
     <>
-      <PageHero eyebrow="Academics" title="Building strong academic foundations" subtitle="Innovative teaching, discipline, and holistic learning for nursery and primary pupils." image={images.academics} />
+      <PageHero eyebrow="Academics" title="Building strong academic foundations" subtitle="Innovative teaching, discipline, and holistic learning for young learners." image={images.academics} />
 
       <section className="section">
         <div className="container grid gap-6 lg:grid-cols-2">

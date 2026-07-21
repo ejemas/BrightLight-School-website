@@ -114,7 +114,7 @@ export function ContactForm() {
       </button>
       {status === "success" ? (
         <p className="rounded-xl bg-gradient-to-r from-[#e9f7ff] to-[#f0faff] p-4 text-sm font-bold text-[#08213f]">
-          Thank you for contacting The BrightLight International Nursery and Primary School. Our team will get back to you shortly.
+          Thank you for contacting Brightlight International School. Our team will get back to you shortly.
         </p>
       ) : null}
       {status === "error" ? (

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { CtaBand } from "@/components/cta-band";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
-import { classes, images } from "@/lib/content";
+import { classes, images, schoolInfo } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Classes and Sections",
@@ -26,7 +26,7 @@ export default function ClassesPage() {
               >
                 <Image
                   src={item.image}
-                  alt={`${item.title} pupils at The BrightLight School`}
+                  alt={`${item.title} pupils at ${schoolInfo.name}`}
                   fill
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"

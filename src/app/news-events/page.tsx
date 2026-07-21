@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CalendarDays } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
-import { events, images } from "@/lib/content";
+import { events, images, schoolInfo } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "News and Events",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function NewsEventsPage() {
   return (
     <>
-      <PageHero eyebrow="News and Events" title="Stay updated with BrightLight" subtitle="Important school dates, activities, meetings, and announcements." image={images.event} />
+      <PageHero eyebrow="News and Events" title={`Stay updated with ${schoolInfo.name}`} subtitle="Important school dates, activities, meetings, and announcements." image={images.event} />
 
       <section className="section">
         <div className="container">

@@ -19,11 +19,12 @@ export const metadata: Metadata = {
   },
   description: pageSeo.home.description,
   keywords: [
-    "Nursery and Primary School in Warri",
-    "BrightLight International Nursery and Primary School",
+    "International school in Warri",
+    "Brightlight International School",
     "Quality education in Warri",
-    "Nursery school in Delta State",
-    "Primary school in Warri",
+    "Private school in Delta State",
+    "Early years education in Warri",
+    "Grade school education in Warri",
     "Safe school environment",
     "Moral and academic development"
   ],

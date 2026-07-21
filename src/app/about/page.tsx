@@ -9,7 +9,7 @@ import { boardMembers, chairmanProfile, coreValues, images, schoolInfo } from "@
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Learn about The BrightLight International Nursery and Primary School history, vision, mission, values, and leadership."
+  description: "Learn about Brightlight International School's history, vision, mission, values, and leadership."
 };
 
 const coreValueImages = [
@@ -23,19 +23,19 @@ const coreValueImages = [
   },
   {
     src: "/images/school/96f3d535-8982-4637-a210-4480dd353eea.webp",
-    alt: "BrightLight pupils gathered outdoors"
+    alt: "Brightlight International School pupils gathered outdoors"
   },
   {
     src: "/images/school/765913dd-c489-4643-8d0d-810f6eee0945.webp",
-    alt: "BrightLight School entrance welcoming pupils"
+    alt: "Brightlight International School entrance welcoming pupils"
   },
   {
     src: "/images/school/c0e769a1-8d48-4b69-ab32-537f79c2c992.webp",
-    alt: "Clean and safe BrightLight school corridor"
+    alt: "Clean and safe Brightlight International School corridor"
   },
   {
     src: "/images/school/83ff1ace-f8a8-4388-a3b1-eb08a376431e.webp",
-    alt: "BrightLight classroom prepared for learning"
+    alt: "Brightlight International School classroom prepared for learning"
   }
 ];
 
@@ -49,9 +49,9 @@ export default function AboutPage() {
           <MotionSection>
             <SectionHeading eyebrow="Our History" title={`A trusted learning foundation since ${schoolInfo.founded}`} />
             <div className="mt-6 space-y-5 text-[0.95rem] leading-8 text-[#5d6f82]">
-              <p>Founded in 2013, The BrightLight School was established with a strong passion for providing quality education and building a solid foundation for young learners. What began as a humble vision to nurture children academically, morally, and socially has grown into a respected school known for excellence, discipline, and holistic child development.</p>
-              <p>From the beginning, the school was created to provide a safe and supportive learning environment where children receive not only sound academic training, but also strong character formation rooted in positive values. Starting with a few pupils and dedicated teachers, The BrightLight School has steadily grown in size, facilities, and impact.</p>
-              <p>Over the years, the school has celebrated outstanding academic achievements, successful graduations, and impressive performances in extracurricular activities. Today, The BrightLight School remains committed to innovative teaching, child-centered learning, and raising confident future leaders in a safe, caring, and inspiring environment.</p>
+              <p>Founded in {schoolInfo.founded}, {schoolInfo.name} was established with a strong passion for providing quality education and building a solid foundation for young learners. What began as a humble vision to nurture children academically, morally, and socially has grown into a respected school known for excellence, discipline, and holistic child development.</p>
+              <p>From the beginning, the school was created to provide a safe and supportive learning environment where children receive not only sound academic training, but also strong character formation rooted in positive values. Starting with a few pupils and dedicated teachers, {schoolInfo.name} has steadily grown in size, facilities, and impact.</p>
+              <p>Over the years, the school has celebrated outstanding academic achievements, successful graduations, and impressive performances in extracurricular activities. Today, {schoolInfo.name} remains committed to innovative teaching, child-centered learning, and raising confident future leaders in a safe, caring, and inspiring environment.</p>
             
             </div>
           </MotionSection>
@@ -59,7 +59,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="absolute -bottom-4 -right-4 h-full w-full rounded-2xl bg-gradient-to-br from-[#2382bf]/12 to-[#f4d31f]/8" />
               <div className="image-frame relative aspect-[4/5] rounded-2xl">
-                <Image src="/images/school/765913dd-c489-4643-8d0d-810f6eee0945.webp" alt="BrightLight School entrance with pupils" fill className="object-cover" sizes="40vw" />
+                <Image src="/images/school/765913dd-c489-4643-8d0d-810f6eee0945.webp" alt="Brightlight International School entrance with pupils" fill className="object-cover" sizes="40vw" />
               </div>
             </div>
           </MotionSection>

@@ -21,8 +21,8 @@ import {
 } from "lucide-react";
 
 export const schoolInfo = {
-  name: "The BrightLight International Nursery and Primary School",
-  shortName: "BrightLight School",
+  name: "Brightlight International School",
+  shortName: "Brightlight International School",
   address: "56, Okiti Street, Off Giwa-Amu, Airport Road, Warri, Delta State, Nigeria.",
   tagline: "Raising Confident, Intelligent, and Morally Sound Children",
   vision: "To raise confident, intelligent, and morally sound children equipped for global relevance.",
@@ -30,7 +30,7 @@ export const schoolInfo = {
   phone: "08139377306 and 08035486250",
   email: "brightlightschool12@gmail.com",
   whatsapp: "https://wa.me/2348139377306",
-  founded: "2013"
+  founded: "2020"
 };
 
 export const images = {
@@ -226,20 +226,20 @@ export const galleryCategories = [
 
 export const galleryItems = [
   { category: "Classroom Activities", src: images.academics, alt: "Pupils seated in a learning circle" },
-  { category: "Classroom Activities", src: images.classroom, alt: "BrightLight pupils during school activity" },
+  { category: "Classroom Activities", src: images.classroom, alt: "Brightlight International School pupils during a school activity" },
   { category: "Classroom Activities", src: "/images/school/09cc1b17-b792-492a-a803-89c1a821ed5a.webp", alt: "Pupils taking part in a school learning moment" },
-  { category: "Graduation", src: images.graduation, alt: "BrightLight pupil speaking during graduation" },
-  { category: "Graduation", src: "/images/school/765913dd-c489-4643-8d0d-810f6eee0945.webp", alt: "Graduation event at BrightLight School" },
+  { category: "Graduation", src: images.graduation, alt: "Brightlight International School pupil speaking during graduation" },
+  { category: "Graduation", src: "/images/school/765913dd-c489-4643-8d0d-810f6eee0945.webp", alt: "Graduation event at Brightlight International School" },
   { category: "Graduation", src: "/images/school/71fc39f0-a30a-4170-890e-d9c7935fc918.webp", alt: "Graduation ceremony backdrop and pupil" },
   { category: "Sports Day", src: images.pupils, alt: "Pupils standing together outdoors" },
   { category: "Sports Day", src: "/images/school/96f3d535-8982-4637-a210-4480dd353eea.webp", alt: "Group of pupils in outdoor activity" },
   { category: "Cultural Day", src: images.cultural, alt: "Pupils in cultural attire" },
   { category: "Cultural Day", src: images.culturalTwo, alt: "Pupils performing cultural activities" },
-  { category: "Cultural Day", src: "/images/school/d5148284-e7fa-457a-9abc-2cc51d32f48c.webp", alt: "BrightLight cultural presentation" },
+  { category: "Cultural Day", src: "/images/school/d5148284-e7fa-457a-9abc-2cc51d32f48c.webp", alt: "Brightlight International School cultural presentation" },
   { category: "Excursions", src: "/images/school/2d820404-4691-408d-a71e-3e48a8c74c87.webp", alt: "Pupils during an outing or activity" },
   { category: "Excursions", src: "/images/school/f9c371e7-840a-4b84-bc92-120ef27463a9.webp", alt: "Pupils gathered during school activity" },
   { category: "Special Events", src: images.event, alt: "Parents and pupils at a school event" },
-  { category: "Special Events", src: "/images/school/b02b94e1-5b00-4ca3-b572-d7ca7de6e3aa.webp", alt: "BrightLight school special event" }
+  { category: "Special Events", src: "/images/school/b02b94e1-5b00-4ca3-b572-d7ca7de6e3aa.webp", alt: "Brightlight International School special event" }
 ];
 
 export const events = [
@@ -252,7 +252,7 @@ export const events = [
 
 export const testimonials = [
   {
-    quote: "The BrightLight School has been a blessing to our family. My child has improved academically and also grown in confidence and discipline.",
+    quote: "Brightlight International School has been a blessing to our family. My child has improved academically and also grown in confidence and discipline.",
     name: "Mr Bright",
     role: "Parent"
   },
@@ -303,7 +303,7 @@ export const staffProfiles = [
     name: "Staffs",
     role: "Teaching and Support Team",
     image: "/images/school/staff.webp",
-    alt: "BrightLight teaching and support staff"
+    alt: "Brightlight International School teaching and support staff"
   }
 ];
 
@@ -364,8 +364,8 @@ export const accreditationPlaceholders = [
 ];
 
 export const stats = [
-  ["2013", "Founded"],
-  ["Nursery - Primary", "Sections"],
+  [schoolInfo.founded, "Founded"],
+  ["Early Years - Grade School", "Sections"],
   ["Warri", "Delta State"],
   ["Holistic", "Learning Focus"]
 ];
@@ -399,7 +399,7 @@ export const socialLinks = [
 
 export const pageSeo = {
   home: {
-    title: "The BrightLight International Nursery and Primary School | Nursery and Primary School in Warri",
-    description: "The BrightLight International Nursery and Primary School is a nursery and primary school in Warri, Delta State, committed to raising confident, intelligent, and morally sound children through quality education, godly values, and holistic child development."
+    title: "Brightlight International School | International School in Warri",
+    description: "Brightlight International School is a private international school in Warri, Delta State, committed to raising confident, intelligent, and morally sound children through quality education, godly values, and holistic child development."
   }
 };

@@ -15,7 +15,7 @@ export default function HomePage() {
     <>
       {/* ══════ Hero ══════ */}
       <section className="relative overflow-hidden bg-[#08213f] text-white">
-        <Image src={images.hero} alt="BrightLight pupils in a learning circle" fill priority className="object-cover opacity-25" sizes="100vw" />
+        <Image src={images.hero} alt={`${schoolInfo.name} pupils in a learning circle`} fill priority className="object-cover opacity-25" sizes="100vw" />
         <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(8,33,63,0.96)_0%,rgba(8,33,63,0.78)_40%,rgba(35,130,191,0.4)_100%)]" />
 
         {/* Decorative shapes */}
@@ -27,7 +27,7 @@ export default function HomePage() {
           <MotionSection>
             <div className="inline-flex flex-col items-start gap-2 text-sm font-extrabold text-[#f4d31f]">
               <span className="h-[2px] w-12 rounded-full bg-gradient-to-r from-[#2382bf] to-[#f4d31f]" />
-              Premium nursery and primary education in Warri
+              Premium international education in Warri
             </div>
             <h1 className="mt-5 max-w-[680px] text-4xl font-extrabold leading-[1.06] tracking-tight sm:text-5xl lg:text-[3.6rem]">{schoolInfo.tagline}</h1>
             <p className="mt-6 max-w-xl text-[1.05rem] leading-8 text-[#c8e4f6]">
@@ -41,7 +41,7 @@ export default function HomePage() {
           </MotionSection>
           <MotionSection delay={0.16} className="hidden lg:block">
             <div className="image-frame relative aspect-[4/5] rounded-2xl">
-              <Image src={images.academics} alt="BrightLight pupils seated together for learning" fill className="object-cover" sizes="35vw" />
+              <Image src={images.academics} alt={`${schoolInfo.name} pupils seated together for learning`} fill className="object-cover" sizes="35vw" />
             </div>
           </MotionSection>
         </div>
@@ -82,7 +82,7 @@ export default function HomePage() {
       {/* ══════ Highlights ══════ */}
       <section className="section">
         <div className="container">
-          <SectionHeading centered eyebrow="School Highlights" title="A safe, disciplined, and caring place to learn" subtitle="BrightLight combines academic seriousness with warmth, moral development, and child-centered guidance." />
+          <SectionHeading centered eyebrow="School Highlights" title="A safe, disciplined, and caring place to learn" subtitle={`${schoolInfo.name} combines academic seriousness with warmth, moral development, and child-centered guidance.`} />
           <div className="mt-14 grid-auto">
             {highlights.map((item) => (
               <MotionSection key={item.title}>
@@ -101,7 +101,7 @@ export default function HomePage() {
               {/* Decorative offset border */}
               <div className="absolute -bottom-4 -right-4 h-full w-full rounded-2xl bg-gradient-to-br from-[#2382bf]/15 to-[#f4d31f]/10" />
               <div className="image-frame relative aspect-[4/3] rounded-2xl">
-                <Image src={images.hero} alt="BrightLight pupils seated in a learning circle" fill className="object-cover" sizes="50vw" />
+                <Image src={images.hero} alt={`${schoolInfo.name} pupils seated in a learning circle`} fill className="object-cover" sizes="50vw" />
               </div>
             </div>
           </MotionSection>
@@ -109,7 +109,7 @@ export default function HomePage() {
             <p className="eyebrow">Welcome from the Principal</p>
             <h2 className="section-title">Children are loved, guided, inspired, and prepared for a bright future.</h2>
             <p className="section-lead">
-              We believe every child has unique gifts and abilities. At BrightLight, learning goes beyond the classroom through a safe, caring, and engaging environment where pupils ask questions, explore ideas, develop talents, and build the right foundation for lifelong success.
+              We believe every child has unique gifts and abilities. At {schoolInfo.name}, learning goes beyond the classroom through a safe, caring, and engaging environment where pupils ask questions, explore ideas, develop talents, and build the right foundation for lifelong success.
             </p>
             <div className="mt-8 border-l-[3px] border-[#f4d31f] pl-5">
               <p className="font-extrabold text-[#08213f]">Mrs Deborah Uloko</p>
@@ -123,7 +123,7 @@ export default function HomePage() {
       <section className="section">
         <div className="container grid items-center gap-12 lg:grid-cols-[1fr_0.9fr]">
           <MotionSection>
-            <SectionHeading eyebrow="About BrightLight" title={`Founded in ${schoolInfo.founded} with a passion for strong foundations`} subtitle="The school continues to nurture young minds, discover talents, and raise future leaders through quality education, discipline, and holistic development." />
+            <SectionHeading eyebrow={`About ${schoolInfo.name}`} title={`Founded in ${schoolInfo.founded} with a passion for strong foundations`} subtitle="The school continues to nurture young minds, discover talents, and raise future leaders through quality education, discipline, and holistic development." />
             <div className="mt-10 grid grid-cols-2 gap-4">
               {stats.map(([value, label]) => (
                 <div key={label} className="rounded-xl border border-[#d5efff] bg-gradient-to-br from-[#f7fcff] to-[#eef8ff] p-5 transition-all duration-200 hover:shadow-md">
@@ -143,7 +143,7 @@ export default function HomePage() {
                 "/images/school/cea7d202-1842-4b46-a64c-687ae4169ffc.webp",
               ].map((src, index) => (
                 <div key={src} className={`image-frame relative rounded-2xl ${index === 0 ? "aspect-[3/4]" : "aspect-square"} ${index === 1 ? "-translate-y-3" : ""} ${index === 2 ? "translate-y-3" : ""}`}>
-                  <Image src={src} alt="BrightLight school moment" fill className="object-cover" sizes="25vw" />
+                  <Image src={src} alt={`${schoolInfo.name} school moment`} fill className="object-cover" sizes="25vw" />
                 </div>
               ))}
             </div>
@@ -169,7 +169,7 @@ export default function HomePage() {
       {/* ══════ Testimonials ══════ */}
       <section className="section">
         <div className="container">
-          <SectionHeading centered eyebrow="Testimonials" title="What parents say" subtitle="Hear from parents and guardians who value the care, learning, and support their children receive at BrightLight." />
+          <SectionHeading centered eyebrow="Testimonials" title="What parents say" subtitle={`Hear from parents and guardians who value the care, learning, and support their children receive at ${schoolInfo.name}.`} />
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {testimonials.map((item) => (
               <TestimonialCard key={item.quote} {...item} />

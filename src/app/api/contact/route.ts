@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 const SCHOOL_EMAIL = "brightlightschool12@gmail.com";
-const DEFAULT_FROM = "BrightLight School <onboarding@resend.dev>";
+const SCHOOL_NAME = "Brightlight International School";
+const DEFAULT_FROM = `${SCHOOL_NAME} <onboarding@resend.dev>`;
 
 type ContactPayload = {
   guardianName?: unknown;
@@ -57,7 +58,7 @@ function renderHtml(details: ContactDetails, submittedAt: string) {
         <div style="height: 5px; background: linear-gradient(90deg, #2382bf, #f4cf00);"></div>
         <div style="padding: 28px;">
           <p style="margin: 0 0 8px; color: #2382bf; font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;">Website Enquiry</p>
-          <h1 style="margin: 0 0 18px; color: #08213f; font-size: 26px; line-height: 1.25;">New enquiry from BrightLight School website</h1>
+          <h1 style="margin: 0 0 18px; color: #08213f; font-size: 26px; line-height: 1.25;">New enquiry from ${SCHOOL_NAME} website</h1>
           <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
             ${detailRow("Parent/Guardian Name", details.guardianName)}
             ${detailRow("Phone Number", details.phone)}
@@ -79,7 +80,7 @@ function renderHtml(details: ContactDetails, submittedAt: string) {
 
 function renderText(details: ContactDetails, submittedAt: string) {
   return [
-    "New enquiry from BrightLight School website",
+    `New enquiry from ${SCHOOL_NAME} website`,
     "",
     `Parent/Guardian Name: ${emailValue(details.guardianName)}`,
     `Phone Number: ${emailValue(details.phone)}`,
