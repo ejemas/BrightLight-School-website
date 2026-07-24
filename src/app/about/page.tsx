@@ -147,12 +147,21 @@ export default function AboutPage() {
           <SectionHeading centered eyebrow="Leadership" title="Our Board" />
           <div className="mx-auto mt-12 grid max-w-6xl gap-7 md:grid-cols-2 xl:grid-cols-3">
             {boardMembers.map((member) => (
-              <article key={member.name} className="group relative min-h-[440px] overflow-hidden rounded-2xl shadow-[0_22px_55px_rgba(8,33,63,0.16)]">
+              <article key={member.name} className="group relative min-h-[440px] overflow-hidden rounded-2xl bg-[#0a345e] shadow-[0_22px_55px_rgba(8,33,63,0.16)]">
+                <Image
+                  src={member.image}
+                  alt=""
+                  fill
+                  aria-hidden="true"
+                  className="scale-110 object-cover opacity-40 blur-xl"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-[#08213f]/25" />
                 <Image
                   src={member.image}
                   alt={member.alt}
                   fill
-                  className="object-cover transition duration-700 group-hover:scale-105"
+                  className="object-contain object-center transition duration-700 group-hover:brightness-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(35,130,191,0.08)_0%,rgba(10,79,138,0.36)_48%,rgba(8,33,63,0.9)_100%)]" />

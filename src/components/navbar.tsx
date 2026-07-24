@@ -26,8 +26,6 @@ const exploreLinks = [
   { href: "/faq", label: "FAQ", desc: "Common questions answered" },
 ];
 
-const allLinks = [...primaryLinks, ...exploreLinks];
-
 const menuEase = [0.22, 1, 0.36, 1] as const;
 
 const mobileMenuVariants = {
@@ -55,9 +53,11 @@ const mobileLinkVariants = {
 export function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileExploreOpen, setMobileExploreOpen] = useState(false);
   const [exploreOpen, setExploreOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const isExploreActive = exploreLinks.some((link) => pathname === link.href);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -70,6 +70,7 @@ export function Navbar() {
   useEffect(() => {
     const id = window.setTimeout(() => {
       setMobileOpen(false);
+      setMobileExploreOpen(false);
       setExploreOpen(false);
     }, 0);
 
@@ -101,6 +102,7 @@ export function Navbar() {
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setMobileOpen(false);
+        setMobileExploreOpen(false);
       }
     };
 
@@ -108,7 +110,16 @@ export function Navbar() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [mobileOpen]);
 
-  const isExploreActive = exploreLinks.some((l) => pathname === l.href);
+  function toggleMobileMenu() {
+    const nextOpen = !mobileOpen;
+    setMobileOpen(nextOpen);
+    setMobileExploreOpen(nextOpen && isExploreActive);
+  }
+
+  function closeMobileMenu() {
+    setMobileOpen(false);
+    setMobileExploreOpen(false);
+  }
 
   return (
     <header
@@ -233,7 +244,7 @@ export function Navbar() {
           aria-expanded={mobileOpen}
           aria-controls="mobile-navigation-menu"
           className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#b9dff5] bg-white/60 text-[#08213f] shadow-[0_8px_24px_rgba(8,33,63,0.08)] transition-colors hover:bg-[#e9f7ff] lg:hidden"
-          onClick={() => setMobileOpen((v) => !v)}
+          onClick={toggleMobileMenu}
         >
           <motion.span
             animate={{ rotate: mobileOpen ? 180 : 0, scale: mobileOpen ? 0.94 : 1 }}
@@ -269,7 +280,7 @@ export function Navbar() {
                 className="grid gap-0"
                 aria-label="Mobile navigation"
               >
-                {allLinks.map((link, index) => {
+                {primaryLinks.map((link, index) => {
                   const active = pathname === link.href;
                   return (
                     <motion.div key={link.href} variants={mobileLinkVariants}>
@@ -280,7 +291,7 @@ export function Navbar() {
                             ? "text-[#f4d31f]"
                             : "text-white hover:text-[#f4d31f]"
                         }`}
-                        onClick={() => setMobileOpen(false)}
+                        onClick={closeMobileMenu}
                       >
                         <span className="flex min-w-0 items-baseline gap-2">
                           <span className="truncate text-[0.98rem] font-extrabold uppercase leading-none tracking-[0.01em]">
@@ -301,6 +312,87 @@ export function Navbar() {
                     </motion.div>
                   );
                 })}
+
+                <motion.div variants={mobileLinkVariants}>
+                  <button
+                    type="button"
+                    aria-expanded={mobileExploreOpen}
+                    aria-controls="mobile-explore-links"
+                    className={`group flex w-full items-center justify-between gap-4 border-b border-white/12 px-0 py-2.5 text-left transition-all duration-300 ${
+                      isExploreActive || mobileExploreOpen
+                        ? "text-[#f4d31f]"
+                        : "text-white hover:text-[#f4d31f]"
+                    }`}
+                    onClick={() => setMobileExploreOpen((open) => !open)}
+                  >
+                    <span className="flex min-w-0 items-baseline gap-2">
+                      <span className="truncate text-[0.98rem] font-extrabold uppercase leading-none tracking-[0.01em]">
+                        Explore
+                      </span>
+                      <span className={`text-[0.58rem] font-bold ${isExploreActive || mobileExploreOpen ? "text-[#fff3a3]" : "text-[#9fcbe6]"}`}>
+                        (06)
+                      </span>
+                    </span>
+                    <span className={`inline-flex h-7 w-9 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${
+                      isExploreActive || mobileExploreOpen
+                        ? "border-[#f4d31f]/70 bg-[#f4d31f] text-[#08213f]"
+                        : "border-white/22 text-white group-hover:border-[#f4d31f]/60 group-hover:text-[#f4d31f]"
+                    }`}>
+                      <ChevronDown
+                        size={15}
+                        className={`transition-transform duration-300 ${mobileExploreOpen ? "rotate-180" : ""}`}
+                      />
+                    </span>
+                  </button>
+
+                  <AnimatePresence initial={false}>
+                    {mobileExploreOpen ? (
+                      <motion.div
+                        id="mobile-explore-links"
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.38, ease: menuEase }}
+                        className="overflow-hidden"
+                      >
+                        <div className="border-b border-white/12 bg-white/[0.04] py-1 pl-4">
+                          {exploreLinks.map((link, index) => {
+                            const active = pathname === link.href;
+
+                            return (
+                              <Link
+                                key={link.href}
+                                href={link.href}
+                                className={`group flex items-center justify-between gap-4 border-b border-white/8 py-2.5 pl-1 pr-0 transition-colors duration-200 last:border-b-0 ${
+                                  active
+                                    ? "text-[#f4d31f]"
+                                    : "text-[#d9edf8] hover:text-[#f4d31f]"
+                                }`}
+                                onClick={closeMobileMenu}
+                              >
+                                <span className="flex min-w-0 items-baseline gap-2">
+                                  <span className="truncate text-[0.84rem] font-extrabold uppercase leading-none tracking-[0.01em]">
+                                    {link.label}
+                                  </span>
+                                  <span className={`text-[0.55rem] font-bold ${active ? "text-[#fff3a3]" : "text-[#89b9d5]"}`}>
+                                    ({String(index + 7).padStart(2, "0")})
+                                  </span>
+                                </span>
+                                <span className={`inline-flex h-6 w-8 shrink-0 items-center justify-center rounded-full border transition-colors duration-200 ${
+                                  active
+                                    ? "border-[#f4d31f]/70 text-[#f4d31f]"
+                                    : "border-white/18 text-[#c8e4f6] group-hover:border-[#f4d31f]/60 group-hover:text-[#f4d31f]"
+                                }`}>
+                                  <ArrowRight size={12} />
+                                </span>
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      </motion.div>
+                    ) : null}
+                  </AnimatePresence>
+                </motion.div>
               </motion.nav>
 
               <div className="mt-auto border-t border-white/14 pt-5">
@@ -311,14 +403,14 @@ export function Navbar() {
                   <Link
                     href="/admissions"
                     className="button-primary mt-3 min-h-[42px] w-full text-[0.82rem]"
-                    onClick={() => setMobileOpen(false)}
+                    onClick={closeMobileMenu}
                   >
                     Apply Now
                   </Link>
                   <Link
                     href={schoolInfo.whatsapp === "#" ? "/contact" : schoolInfo.whatsapp}
                     className="mt-2 flex items-center justify-center gap-2 rounded-full border border-white/18 px-5 py-2.5 text-[0.82rem] font-extrabold text-white transition-colors hover:bg-white/10"
-                    onClick={() => setMobileOpen(false)}
+                    onClick={closeMobileMenu}
                   >
                     <MessageCircle size={15} />
                     Contact School Admin
