@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 const SCHOOL_EMAIL = "brightlightschool12@gmail.com";
-const SCHOOL_NAME = "Brightlight International School";
+const SCHOOL_NAME = "The Brightlight School";
 const DEFAULT_FROM = `${SCHOOL_NAME} <onboarding@resend.dev>`;
 
 type ContactPayload = {

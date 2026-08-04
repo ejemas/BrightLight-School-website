@@ -9,7 +9,7 @@ import { boardMembers, chairmanProfile, coreValues, images, schoolInfo } from "@
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Learn about Brightlight International School's history, vision, mission, values, and leadership."
+  description: "Learn about The Brightlight School's history, vision, mission, values, and leadership."
 };
 
 const coreValueImages = [
@@ -23,19 +23,19 @@ const coreValueImages = [
   },
   {
     src: "/images/school/96f3d535-8982-4637-a210-4480dd353eea.webp",
-    alt: "Brightlight International School pupils gathered outdoors"
+    alt: "The Brightlight School pupils gathered outdoors"
   },
   {
     src: "/images/school/765913dd-c489-4643-8d0d-810f6eee0945.webp",
-    alt: "Brightlight International School entrance welcoming pupils"
+    alt: "The Brightlight School entrance welcoming pupils"
   },
   {
     src: "/images/school/c0e769a1-8d48-4b69-ab32-537f79c2c992.webp",
-    alt: "Clean and safe Brightlight International School corridor"
+    alt: "Clean and safe corridor at The Brightlight School"
   },
   {
     src: "/images/school/83ff1ace-f8a8-4388-a3b1-eb08a376431e.webp",
-    alt: "Brightlight International School classroom prepared for learning"
+    alt: "The Brightlight School classroom prepared for learning"
   }
 ];
 
@@ -59,7 +59,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="absolute -bottom-4 -right-4 h-full w-full rounded-2xl bg-gradient-to-br from-[#2382bf]/12 to-[#f4d31f]/8" />
               <div className="image-frame relative aspect-[4/5] rounded-2xl">
-                <Image src="/images/school/765913dd-c489-4643-8d0d-810f6eee0945.webp" alt="Brightlight International School entrance with pupils" fill className="object-cover" sizes="40vw" />
+                <Image src="/images/school/765913dd-c489-4643-8d0d-810f6eee0945.webp" alt="The Brightlight School entrance with pupils" fill className="object-cover" sizes="40vw" />
               </div>
             </div>
           </MotionSection>

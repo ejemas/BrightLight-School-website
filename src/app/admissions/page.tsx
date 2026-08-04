@@ -8,7 +8,7 @@ import { admissionSteps, images, requiredDocuments, schoolInfo } from "@/lib/con
 
 export const metadata: Metadata = {
   title: "Admissions",
-  description: "Begin your child's learning journey with Brightlight International School."
+  description: "Begin your child's learning journey with The Brightlight School."
 };
 
 export default function AdmissionsPage() {

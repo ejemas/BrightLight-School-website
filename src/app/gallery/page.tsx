@@ -5,7 +5,7 @@ import { images, schoolInfo } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Gallery",
-  description: "Moments from Brightlight International School classrooms, celebrations, activities, and special events."
+  description: "Moments from The Brightlight School classrooms, celebrations, activities, and special events."
 };
 
 export default function GalleryPage() {

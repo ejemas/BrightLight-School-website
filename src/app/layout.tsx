@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   },
   description: pageSeo.home.description,
   keywords: [
-    "International school in Warri",
-    "Brightlight International School",
+    "Private school in Warri",
+    "The Brightlight School",
     "Quality education in Warri",
     "Private school in Delta State",
     "Early years education in Warri",

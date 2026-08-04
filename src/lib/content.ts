@@ -21,8 +21,8 @@ import {
 } from "lucide-react";
 
 export const schoolInfo = {
-  name: "Brightlight International School",
-  shortName: "Brightlight International School",
+  name: "The Brightlight School",
+  shortName: "The Brightlight School",
   address: "56, Okiti Street, Off Giwa-Amu, Airport Road, Warri, Delta State, Nigeria.",
   tagline: "Raising Confident, Intelligent, and Morally Sound Children",
   vision: "To raise confident, intelligent, and morally sound children equipped for global relevance.",
@@ -228,28 +228,28 @@ export const galleryCategories = [
 export const galleryItems = [
   { category: "Classroom Activities", src: "/images/school/classroom activities 1.webp", alt: "Pupils participating in a classroom learning activity" },
   { category: "Classroom Activities", src: "/images/school/classroom activities 2.webp", alt: "Pupils learning together during classroom activities" },
-  { category: "Classroom Activities", src: "/images/school/classroom activities 3.webp", alt: "Brightlight International School pupils engaged in classroom learning" },
+  { category: "Classroom Activities", src: "/images/school/classroom activities 3.webp", alt: "The Brightlight School pupils engaged in classroom learning" },
   { category: "Graduation", src: "/images/school/Graduation.webp", alt: "Pupils celebrating at the school graduation ceremony" },
-  { category: "Graduation", src: "/images/school/Graduation 2.webp", alt: "Graduating pupils during the Brightlight International School ceremony" },
+  { category: "Graduation", src: "/images/school/Graduation 2.webp", alt: "Graduating pupils during The Brightlight School ceremony" },
   { category: "Graduation", src: "/images/school/Graduation 3.webp", alt: "A memorable moment from the school graduation celebration" },
-  { category: "Sports Day", src: "/images/school/sports day.webp", alt: "Pupils participating in Brightlight International School Sports Day" },
+  { category: "Sports Day", src: "/images/school/sports day.webp", alt: "Pupils participating in The Brightlight School Sports Day" },
   { category: "Sports Day", src: "/images/school/sports day 2.webp", alt: "Pupils enjoying a Sports Day activity" },
   { category: "Sports Day", src: "/images/school/sports day 3.webp", alt: "School pupils taking part in a sporting event" },
   { category: "Sports Day", src: "/images/school/sports day 4.webp", alt: "Pupils gathered for Sports Day activities" },
-  { category: "Sports Day", src: "/images/school/sports day 5.webp", alt: "A lively Sports Day moment at Brightlight International School" },
+  { category: "Sports Day", src: "/images/school/sports day 5.webp", alt: "A lively Sports Day moment at The Brightlight School" },
   { category: "Cultural Day", src: "/images/school/Cultural day.webp", alt: "Pupils dressed in traditional attire for Cultural Day" },
-  { category: "Cultural Day", src: "/images/school/cultural day 2.webp", alt: "Brightlight International School pupils celebrating Cultural Day" },
-  { category: "Career Day", src: "/images/school/career day 1.webp", alt: "Pupils dressed for Career Day at Brightlight International School" },
-  { category: "Career Day", src: "/images/school/career day 3.webp", alt: "Career Day presentation by Brightlight International School pupils" },
+  { category: "Cultural Day", src: "/images/school/cultural day 2.webp", alt: "The Brightlight School pupils celebrating Cultural Day" },
+  { category: "Career Day", src: "/images/school/career day 1.webp", alt: "Pupils dressed for Career Day at The Brightlight School" },
+  { category: "Career Day", src: "/images/school/career day 3.webp", alt: "Career Day presentation by The Brightlight School pupils" },
   { category: "Costume Day", src: "/images/school/Costume day.webp", alt: "Pupils wearing creative outfits for Costume Day" },
-  { category: "Costume Day", src: "/images/school/costume day 2.webp", alt: "Brightlight International School pupils celebrating Costume Day" },
+  { category: "Costume Day", src: "/images/school/costume day 2.webp", alt: "The Brightlight School pupils celebrating Costume Day" },
   { category: "Costume Day", src: "/images/school/costume day 3.webp", alt: "Pupils posing in their Costume Day outfits" },
-  { category: "Costume Day", src: "/images/school/custome day 4.webp", alt: "A colourful Costume Day moment at Brightlight International School" },
+  { category: "Costume Day", src: "/images/school/custome day 4.webp", alt: "A colourful Costume Day moment at The Brightlight School" },
   { category: "Costume Day", src: "/images/school/costume day 5.webp", alt: "Pupils enjoying the school Costume Day celebration" },
-  { category: "Special Events", src: "/images/school/special event.webp", alt: "Pupils and guests attending a Brightlight International School special event" },
+  { category: "Special Events", src: "/images/school/special event.webp", alt: "Pupils and guests attending a special event at The Brightlight School" },
   { category: "Special Events", src: "/images/school/special event 3.webp", alt: "A special school celebration with pupils and families" },
-  { category: "Special Events", src: "/images/school/special event 5.webp", alt: "Brightlight International School pupils during a special event" },
-  { category: "Special Events", src: "/images/school/sprcial event.webp", alt: "A memorable special event at Brightlight International School" }
+  { category: "Special Events", src: "/images/school/special event 5.webp", alt: "The Brightlight School pupils during a special event" },
+  { category: "Special Events", src: "/images/school/sprcial event.webp", alt: "A memorable special event at The Brightlight School" }
 ];
 
 export const events = [
@@ -262,7 +262,7 @@ export const events = [
 
 export const testimonials = [
   {
-    quote: "Brightlight International School has been a blessing to our family. My child has improved academically and also grown in confidence and discipline.",
+    quote: "The Brightlight School has been a blessing to our family. My child has improved academically and also grown in confidence and discipline.",
     name: "Mr Bright",
     role: "Parent"
   },
@@ -313,7 +313,7 @@ export const staffProfiles = [
     name: "Staffs",
     role: "Teaching and Support Team",
     image: "/images/school/staff.webp",
-    alt: "Brightlight International School teaching and support staff"
+    alt: "The Brightlight School teaching and support staff"
   }
 ];
 
@@ -409,7 +409,7 @@ export const socialLinks = [
 
 export const pageSeo = {
   home: {
-    title: "Brightlight International School | International School in Warri",
-    description: "Brightlight International School is a private international school in Warri, Delta State, committed to raising confident, intelligent, and morally sound children through quality education, godly values, and holistic child development."
+    title: "The Brightlight School | Private School in Warri",
+    description: "The Brightlight School is a private school in Warri, Delta State, committed to raising confident, intelligent, and morally sound children through quality education, godly values, and holistic child development."
   }
 };

@@ -6,7 +6,7 @@ import { images, staffProfiles } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Our Staff",
-  description: "Meet the dedicated team guiding and nurturing Brightlight International School pupils."
+  description: "Meet the dedicated team guiding and nurturing pupils at The Brightlight School."
 };
 
 export default function StaffPage() {
