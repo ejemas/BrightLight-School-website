@@ -28,7 +28,7 @@ export const schoolInfo = {
   vision: "To raise confident, intelligent, and morally sound children equipped for global relevance.",
   mission: "To provide quality education through innovative teaching, godly values, and holistic child development.",
   phone: "08139377306 and 08035486250",
-  email: "brightlightschool12@gmail.com",
+  email: "info@brightlightschool.com",
   whatsapp: "https://wa.me/2348139377306",
   founded: "2020"
 };
@@ -282,19 +282,19 @@ export const boardMembers = [
   {
     name: "Mrs Yvonne Ukanah",
     role: "Director",
-    image: "/images/school/Director.webp",
+    image: "/images/school/Mrs Yvonne Ukanah.webp",
     alt: "Mrs Yvonne Ukanah, Director"
   },
   {
     name: "Mrs Deborah Uloko",
     role: "Principal",
-    image: "/images/school/dc50fa9d-0fc1-42e9-993e-d52d68e0e588.webp",
+    image: "/images/school/Mrs Deborah Uloko.webp",
     alt: "Mrs Deborah Uloko, Principal"
   },
   {
     name: "Mrs Love Ogboi",
     role: "Head of Administration",
-    image: "/images/school/360e1b0b-86d0-4fd8-aa29-d15ca46ae053.webp",
+    image: "/images/school/Mrs Love Ogboi.webp",
     alt: "Mrs Love Ogboi, Head of Administration"
   }
 ];
@@ -302,7 +302,7 @@ export const boardMembers = [
 export const chairmanProfile = {
   name: "Mr Joseph Ukanah",
   role: "Chairman",
-  image: "/images/school/Chairman.webp",
+  image: "/images/school/Mr Joseph Ukanah.webp",
   alt: "Mr Joseph Ukanah, Chairman"
 };
 
@@ -320,9 +320,8 @@ export const staffProfiles = [
 export const faqs = [
   ["What age do you accept?", "We accept children into our creche, pre-nursery, nursery, and primary sections. Parents can contact the school admin for proper placement based on age and learning level."],
   ["What curriculum do you use?", "We use a balanced curriculum that supports literacy, numeracy, creativity, moral instruction, social development, and practical learning."],
-  ["Is transport available?", "Transport information should be confirmed directly with the school admin. This placeholder can be updated when the school provides a final response."],
-  ["What are the school hours?", "School hours should be confirmed with the school admin. This placeholder can be updated when the official time is provided."],
-  ["Do you provide meals?", "Meal information should be confirmed directly with the school admin. This placeholder can be updated when the school provides a final response."]
+  ["Is transport available?", "Transport information should be confirmed directly with the school admin."],
+  ["What are the school hours?", "School runs from morning 8:00am to afternoon periods."]
 ];
 
 export const quickActions = [

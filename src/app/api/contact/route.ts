@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const SCHOOL_EMAIL = "brightlightschool12@gmail.com";
+const SCHOOL_EMAIL = "info@brightlightschool.com";
 const SCHOOL_NAME = "The Brightlight School";
 const DEFAULT_FROM = `${SCHOOL_NAME} <onboarding@resend.dev>`;
 
